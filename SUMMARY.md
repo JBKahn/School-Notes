@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Lecture 01](lecture_01/README.md)
-* [Lecture 01: Cloud Computing](lecture_01_cloud_computing/README.md)
+* [CSC309](CSC309/README.md)
+    * [Lecture 01](CSC309/lecture_01/README.md)
+    * [Lecture 02: Cloud Computing](CSC309/lecture_02_cloud_computing/README.md)
 
