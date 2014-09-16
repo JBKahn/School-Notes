@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Glossary | My Class Notes</title>
+        <title>Lecture 02: Index and Sorting | My Class Notes</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -12,17 +12,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     
     
     
     
-    
-
-    
-    
+    <link rel="prev" href="../CSC443/README.html" />
     
 
         
@@ -30,11 +27,11 @@
     <body>
         
         
-<link rel="stylesheet" href="gitbook/style.css">
+<link rel="stylesheet" href="../gitbook/style.css">
 
 
         
-    <div class="book"  data-level="" data-basepath="." data-revision="1410825722377">
+    <div class="book"  data-level="2.1" data-basepath=".." data-revision="1410825722377">
     
 
 <div class="book-summary">
@@ -55,7 +52,7 @@
         <li class="chapter " data-level="0" data-path="index.html">
             
                 
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
                          Introduction
@@ -69,7 +66,7 @@
         <li class="chapter " data-level="1" data-path="CSC309/README.html">
             
                 
-                    <a href="./CSC309/README.html">
+                    <a href="../CSC309/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
@@ -86,7 +83,7 @@
         <li class="chapter " data-level="1.1" data-path="CSC309/lecture_01/README.html">
             
                 
-                    <a href="./CSC309/lecture_01/README.html">
+                    <a href="../CSC309/lecture_01/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
@@ -102,7 +99,7 @@
         <li class="chapter " data-level="1.2" data-path="CSC309/lecture_02_cloud_computing/README.html">
             
                 
-                    <a href="./CSC309/lecture_02_cloud_computing/README.html">
+                    <a href="../CSC309/lecture_02_cloud_computing/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
@@ -123,7 +120,7 @@
         <li class="chapter " data-level="2" data-path="CSC443/README.html">
             
                 
-                    <a href="./CSC443/README.html">
+                    <a href="../CSC443/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.</b>
@@ -137,10 +134,10 @@
                 
     
         
-        <li class="chapter " data-level="2.1" data-path="CSC443/lec02.html">
+        <li class="chapter active" data-level="2.1" data-path="CSC443/lec02.html">
             
                 
-                    <a href="./CSC443/lec02.html">
+                    <a href="../CSC443/lec02.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.</b>
@@ -238,33 +235,110 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >My Class Notes</a>
+        <a href="../" >My Class Notes</a>
     </h1>
 </div>
 
             <div class="page-wrapper" tabindex="-1">
                 <div class="page-inner">
                 
+                
+                    <section class="normal" id="section-gitbook_6">
+                    
+                        <h1 id="first-homework-assignemnt">First Homework Assignemnt</h1>
+<h5 id="must-be-able-to">Must be able to:</h5>
+<ul>
+<li>Scan all records (select)</li>
+<li>Insert</li>
+<li>Delete</li>
+<li>Update</li>
+</ul>
+<h5 id="record-serialization">record Serialization</h5>
+<p>...</p>
+<h1 id="indexing">Indexing</h1>
+<h5 id="intro">Intro</h5>
+<ul>
+<li>Lets you find specific files fast.</li>
+<li>Uses data enetries - <key, value> or k*<ul>
+<li>THe value can be the record, the record id or a set of record ids.</li>
+<li>e.g. rid points to page where area of page points to offset of record on the page.</li>
+</ul>
+</li>
+<li>Simplest form is a file with every existing value of a key, we had a rid.<ul>
+<li>Smaller to scan than records.</li>
+<li>Good if it doesn&#39;t change much, otherwise resort on insert and delete....oh god.</li>
+</ul>
+</li>
+<li>B+ tree is an index designed for dynamic files, much more effeciently. We want constant time!<ul>
+<li>Internal nodes are made of page pointers and key values.<ul>
+<li>Left arow less than, right arrow is greater than or eqaul to.</li>
+</ul>
+</li>
+<li>Add/Delete/Reogranize based ofn books/notes.</li>
+</ul>
+</li>
+</ul>
+<h5 id="hush-function">Hush function</h5>
+<h1 id="--bucketing-stuff">- Bucketing stuff.</h1>
+<h1 id="--linked-list-or-directory-based-collisions">- Linked list or directory based collisions.</h1>
+<h1 id="--pick-buckets-to-avoid-too-many-collisions">- Pick buckets to avoid too many collisions.</h1>
+<h1 id="--grow-by-1-dgiit-00---100-000">- Grow by +1 dgiit. 00 -&gt; 100, 000.</h1>
+<pre><code> - Skewed deta means we keep doublingg. ineffecient.
+</code></pre><h5 id="static-hashing">Static Hashing</h5>
+<ul>
+<li>Overflow pages or osemthing liek that to store extra.</li>
+<li>Can&#39;t get rid ofo lots of skew on one value but it can for close files.</li>
+</ul>
+<h5 id="linear-hashing">Linear Hashing</h5>
+<h1 id="--more-distributed">- More distributed.</h1>
+<h5 id="extendible-hashing">Extendible Hashing</h5>
+<ul>
+<li>Cost split instead of all at once.</li>
+</ul>
+<h1 id="sorting">Sorting</h1>
+<ul>
+<li>Naive 3 page algorithm to compare 2 pages at a time to create n sorted pages of saize 1 page, n/2 sorted pages of size 2 .....untiil we have 1 sorted page of size n pages.</li>
+<li>Better version uses B pages to get more done faster.<ul>
+<li>Pass 0 gets runs of length B pages</li>
+<li>Pass 1 merges B-1 pages for length B(B-1).</li>
+<li>Log<em>2 -&gt; Log</em>(B-1)</li>
+<li>e.g.<pre><code class="lang-SQL"><span class="hljs-operator"><span class="hljs-keyword">Select</span> <span class="hljs-keyword">distinct</span> Sname
+<span class="hljs-keyword">From</span> Students
+<span class="hljs-keyword">Order</span> <span class="hljs-keyword">by</span> Sname</span>
+</code></pre>
+</li>
+<li>In that case we don&#39;t need to write all the info in temp files of sort, only the Sname.<ul>
+<li>Distinct will pass back sorted data as it needs to sort to ensure that.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-
+                    
+                    </section>
+                
+                
                 </div>
             </div>
         </div>
 
+        
+        <a href="../CSC443/README.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: CSC443"><i class="fa fa-angle-left"></i></a>
         
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
+<script src="../gitbook/app.js"></script>
 
     
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
     
 
 <script>
